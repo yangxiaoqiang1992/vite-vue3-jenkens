@@ -4,7 +4,7 @@ node {
         def sonarqubeScannerHome = tool name: 'SonarQube Scanner'
 
         withSonarQubeEnv('SonarQubeServer') {
-            sh "${sonarqubeScannerHome}/bin/sonar-scanner"
+            bat "${sonarqubeScannerHome}/bin/sonar-scanner"
         }
     }
 }
